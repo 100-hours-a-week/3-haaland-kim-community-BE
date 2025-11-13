@@ -7,8 +7,10 @@ import com.example.postService.dto.user.request.UpdateUserProfileRequestDto;
 import com.example.postService.dto.user.response.CreateUserResponseDto;
 import com.example.postService.dto.user.response.GetUserResponseDto;
 import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import jakarta.transaction.Transactional;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.Map;
 
@@ -18,7 +20,7 @@ public interface UserService {
     CreateUserResponseDto signUp(CreateUserRequestDto dto);
 
     //로그인 처리 Service 로직
-    ResponseEntity<Map<String, Object>> login(LoginRequestDto dto, HttpServletRequest request);
+    ResponseEntity<Map<String, Object>> login(LoginRequestDto dto, HttpServletResponse httpServletResponse);
 
     //회원 정보 조회 Service 로직
     ResponseEntity<GetUserResponseDto> get(HttpServletRequest httpServletRequest);
@@ -28,8 +30,7 @@ public interface UserService {
 
     ResponseEntity<String> updatePassword(UpdateUserPasswordRequestDto dto, HttpServletRequest httpServletRequest);
 
-    ResponseEntity<String> softDelete(Long userId);
-//
-//    @Transactional
-//    ResponseEntity<String> hardDelete(Long userId);
+    ResponseEntity<String> softDelete(HttpServletRequest httpServletRequest);
+
+
 }

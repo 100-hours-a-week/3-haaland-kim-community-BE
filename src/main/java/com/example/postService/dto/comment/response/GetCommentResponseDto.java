@@ -7,6 +7,13 @@ import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
 
+/**
+ * GetCommentResponseDto
+ * -----------------------------------------------------------
+ * 단일 댓글 조회 응답 DTO
+ * - 프론트엔드에 댓글 단위 데이터를 전달할 때 사용
+ * -----------------------------------------------------------
+ */
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
@@ -25,6 +32,4 @@ public class GetCommentResponseDto {
 
 
 }
-/**
- * 댓글 조회시 응답 dto 댓글 작성자의 닉네임,프로필 이미지, 댓글 내용을 반환
- */
+
