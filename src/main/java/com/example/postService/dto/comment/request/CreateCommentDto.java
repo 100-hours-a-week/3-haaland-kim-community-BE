@@ -5,6 +5,12 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+/**
+ * CreateCommentDto
+ * -----------------------------------------------------------
+ * 댓글 등록 요청 시 클라이언트로부터 전달받는 데이터 객체
+ * -----------------------------------------------------------
+ */
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
@@ -13,7 +19,3 @@ public class CreateCommentDto {
 
     private String text;
 }
-/**
- * 댓글 생성 요청 dto 내용을 전달받음
- */
-/////
